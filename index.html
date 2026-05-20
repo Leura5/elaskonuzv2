@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elaskonuz | Pro Birim Dönüştürücü</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="Fotolar/ElaskonuzV3.png">
+     <meta name="description" content="Elaskonuz ile anlık döviz kurlarını ve altın fiyatlarını takip edin, hızlıca dönüşüm yapın.">
+</head>
+<body>
+   
+<p id="lastUpdated" style="font-size: 0.75rem; color: #a0a0a0; text-align: center; margin-top: 10px;">Son güncelleme: Henüz veri çekilmedi</p>
+    <div class="glass-container">
+        <div class="live-ticker">
+            <div class="ticker-item">
+                <span class="ticker-label"><i class="fas fa-coins" style="color: #fbbf24;"></i> Gram Altın:</span>
+                <span class="ticker-value" id="tickerGold">... TL</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-label"><i class="fas fa-dollar-sign" style="color: #10b981;"></i> USD:</span>
+                <span class="ticker-value" id="tickerUsd">... TL</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-label"><i class="fas fa-euro-sign" style="color: #3b82f6;"></i> EUR:</span>
+                <span class="ticker-value" id="tickerEur">... TL</span>
+            </div>
+        </div>
+
+        <header>
+            <img src="Fotolar/ElaskonuzV3.png" alt="Elaskonuz Logo" class="site-logo">
+            <h1>Elaskonuz <span class="badge">Pro</span></h1>
+            <p>Elaskonuz | Profesyonel Birim Dönüştürücü Merkezi</p>
+        </header>
+
+        <div class="converter-card">
+            <div class="form-group">
+                <label><i class="fas fa-list"></i> Kategori</label>
+                <select id="category">
+                    <option value="currency">Döviz (Canlı Kur)</option>
+                    <option value="weight">Ağırlık Birimleri</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-coins"></i> Miktar</label>
+                <input type="number" id="amount" value="10000" placeholder="Değer giriniz...">
+            </div>
+
+            <div class="conversion-row">
+                <div class="unit-box">
+                    <label>Kaynak</label>
+                    <select id="fromUnit"></select>
+                </div>
+                
+                <div class="swap-icon" id="swapBtn">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+
+                <div class="unit-box">
+                    <label>Hedef</label>
+                    <select id="toUnit"></select>
+                </div>
+            </div>
+
+            <button id="convertBtn">
+                <i class="fas fa-sync-alt"></i> Hesapla
+            </button>
+
+            <div class="result-card">
+                <span id="resultLabel">Sonuç</span>
+                <div id="resultText">0.00</div>
+            </div>
+        </div>
+
+        <footer>
+            <p> <img src="Fotolar/ElaskonuzV3.png" height="20px" width="20px">© 2026 Elaskonuz tarafından geliştirildi. Tüm Hakları Saklıdır. <i class="fas fa-check-circle" style="color: #6366f1;"></i></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
